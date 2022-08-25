@@ -1,0 +1,180 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{oldstyle}                           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.81]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+\usepackage{fancyhdr} 
+\fancyhf{}
+\cfoot{\thepage\ / 2}
+\pagestyle{fancy}    
+
+
+% personal data
+\name{Benoît}{Paris}
+\title{Machine Learning Engineer - Explainability Specialist}                               % optional, remove / comment the line if not wanted
+\address{11, rue Rataud}{75005 Paris}{France}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+33 6 60 74 23 00}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{pro@benoit.paris}                               % optional, remove / comment the line if not wanted
+\homepage{benoit.paris}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{IMG_20190523_190424}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Projects \& Education}
+\cventry{2019}{Explicable.AI}{}{}{}{Intuitive exploratory environment based on the knowledge contained within a machine learning model \newline Currently being developed \newline \url{https://explicable.ai} 
+\newline }  
+
+\cventry{Oct 2018}{Explainable Machine Learning Challenge}{FICO-Google}{}{}{\begin{itemize}
+\item Improved standard RufeFit algorithm to select shorter rules
+\item Discovered a bug in a Python implementation of RuleFit and patched it
+\item Tech: Scikit-Learn, Python, t-SNE, Lasso, Jupyter
+\end{itemize}
+\url{https://github.com/benoitparis/explainable-challenge}
+\newline
+}
+
+\cventry{2006--2009}{MSc Engineering}{Ecole Centrale de Lille}{}{(Leading Engineering School in France, PEng level)}{Computer science \& e-commerce}  % arguments 3 to 6 can be left empty
+
+\section{Experience}
+\cventry{2017--Present}{Machine Learning Engineer}{}{Paris, France}{}{Independent Contractor
+\newline
+\textit{PSA, Direction Marketing Citroën/DS}
+\begin{itemize}
+\item Implemented treeinterpreter (precursor to Tree SHAP) for Spark/Scala. In production: currently helps sales teams customize their communication with qualified leads, enhancing their conversion rate by up to 51\% in some cases. Open Source: \url{https://github.com/benoitparis/InterpretableRandomForest}
+\item Successfully designed, built and operated a predictive marketing pipeline, complete with performance metrics and an application to display the predictions
+\newline
+\end{itemize}}
+\cventry{2012--Present}{Data Management Engineer}{Clémence Consulting}{Paris, France}{}{
+\textit{PSA, Direction Marketing Citroën/DS}
+\newline
+\textit{PSA, PSA Retail – VO}
+\newline
+\textit{La Ligue contre le cancer}
+\newline
+\textit{Dalkia, Direction Financière}
+\begin{itemize}
+\item Designed a batching architecture for multicanal marketing campaigns, admin and back office applications, BI environment
+\item Enhanced flexibility, response time of large workloads using Spark
+\item Carried out DBA roles, data quality monitoring, analysis, data wrangling, data enrichment, ETL pipelines, Spark jobs 
+\item Deployed an entity recognition method for referential data matching
+\item Delivered a Proof of Concept for using Semi-supervised clustering for data cleaning
+\newline
+\end{itemize}}
+\clearpage
+\cventry{2011--2012}{Founder}{OmniFriend}{Paris, France}{}{Omnifriend helps you discover relevant services for the website you are currently visiting
+\begin{itemize}
+\item Strategic planning 
+\item Community management
+\item Full-stack development: browser extension, design, front/middle/back 
+\item Lean startup product development
+\item Business development, partnerships, fundraising start
+\newline
+\end{itemize}}
+\cventry{2010--2011}{E-commerce Engineer}{ECOCEA}{Paris, France}{}{{}
+\begin{itemize}
+\item Backend development, WebSphere Commerce
+\item Project management, analytics: Omniture, Google web analytics
+\newline
+\end{itemize}}
+\cventry{2009}{Market Analyst Intern}{Orange Business Services}{Dubaï, U.A.E}{}{Delivered a Market Sizing analysis of the "Solution for Operators" business line for the Middle East and Africa region. Solution for Operators targets incumbent operators as well as \textit{de facto} operators, such as real estate developers or conglomerates.}
+
+\section{Languages}
+\cvitemwithcomment{French}{Native level}{}
+\cvitemwithcomment{English}{Professional level - CAE}{International environment}
+\cvitemwithcomment{Spanish}{High School level}{}
+
+\section{Tech}
+\cvitem{Machine Learning Internals}{RuleFit, Random Forest, treeinterpreter, Embeddings}
+\cvitem{Machine Learning}{SHAP, Word2Vec, PCA, t-SNE, UMAP, LSH, ROC}
+\cvitem{Frameworks}{Scikit-Learn, Spark, Flink, Spring}
+\cvitem{Environments}{Jupyter, Sagemaker, Weka, Databricks}
+\cvitem{Databases}{Postgres, MySQL, Oracle, Firebird, BigQuery, Hive, Spark SQL, Flink SQL, Distributed Stream Processing}
+\cvitem{Tools}{AWS, Linux, Maven, Git}
+\cvitem{Languages}{Python, Java, Scala, CAML, Elm, Javascript}
+\cvitem{UI}{Primefaces, ReactJS, d3.js, THREE.js}
+
+\section{Interests}
+
+Windsurf, Snowboard, (Spectating) Rhetorical competitions
+\newline
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem{Item 3. This item is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{Item 6. Like item 3 in the single column list before, this item is particularly long to wrap over several lines.}
+
+%\section{References}
+%\begin{cvcolumns}
+%  \cvcolumn{Category 1}{\begin{itemize}\item Person 1\item Person 2\item Person 3\end{itemize}}
+%  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
+%  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
+%\end{cvcolumns}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
